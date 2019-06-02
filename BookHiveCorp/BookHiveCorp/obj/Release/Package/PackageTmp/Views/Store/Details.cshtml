@@ -1,0 +1,30 @@
+﻿@model BookHiveCorp.Models.Book
+
+@{
+    ViewBag.Title = "Book - " + Model.Title;
+}
+
+<h2>@Model.Title</h2>
+
+<p>
+    <img alt="@Model.Title" src="@Url.Content(@Model.BookArtUrl)" />
+</p>
+
+<div id="book-details">
+    <p>
+        <em>Category:</em>
+        @Model.Category.Name
+    </p>
+    <p>
+        <em>Author:</em>
+        @Model.Author.Name
+    </p>
+    <p>
+        <em>Price:</em>
+        @Html.DisplayFor(model => model.Price)
+    </p>
+    <p class="button">
+        @Html.ActionLink("Add to cart", "AddToCart",
+            "ShoppingCart", new { id = Model.BookId }, new { @class = "btn btn-info" })
+    </p>
+</div>

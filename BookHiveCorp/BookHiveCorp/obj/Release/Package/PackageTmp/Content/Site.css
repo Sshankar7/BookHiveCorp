@@ -1,0 +1,79 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 50px;
+    margin-bottom: 200px;
+}
+.footer {
+    color: #fff;
+    padding: 10px;
+}
+.bold {
+    font-weight: bold;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+
+/* BookHive additions */
+
+ul#book-list li {
+    height: 160px;
+}
+
+ul#book-list li img:hover {
+    box-shadow: 1px 1px 7px #777;
+}
+
+ul#book-list li img {
+    box-shadow: 1px 1px 5px #999;
+    border: none;
+    padding: 0;
+}
+
+ul#book-list li a, ul#book-details li a {
+    text-decoration:none;
+}
+
+ul#book-list li a:hover {
+    background: none;
+    -webkit-text-shadow: 1px 1px 2px #bbb;
+    text-shadow: 1px 1px 2px #bbb;
+    color: #363430;
+}

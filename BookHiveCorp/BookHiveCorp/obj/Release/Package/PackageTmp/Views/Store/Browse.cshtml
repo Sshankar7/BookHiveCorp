@@ -1,0 +1,25 @@
+﻿
+@model BookHiveCorp.Models.Category
+@{
+    ViewBag.Title = "Browse Books";
+}
+<div class="category">
+    <h3>
+        <em>@Model.Name</em> Books
+    </h3>
+
+    <ul id="book-list" class="list-unstyled">
+        @foreach (var book in Model.Books)
+        {
+            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-4 container">
+                <a href="@Url.Action("Details", new { id = book.BookId })">
+                    @if (!string.IsNullOrEmpty(book.BookArtUrl))
+                    {
+                        <img alt="@book.Title" src="@Url.Content(@book.BookArtUrl)" />
+                    }
+                    <h5 class="control-label">@book.Title</h5>
+                </a>
+            </li>
+        }
+    </ul>
+</div>
