@@ -18,7 +18,6 @@ namespace BookHiveCorp.App_Start
 
         public void Configuration(IAppBuilder app)
         {
-            // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=316888
             // Enable the application to use a cookie to store information for the signed in user
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
@@ -42,8 +41,6 @@ namespace BookHiveCorp.App_Start
             //   appSecret: "");
 
             //app.UseGoogleAuthentication();
-
-
             using (var context = new BookHiveCorpEntities())
             {
                 context.Database.Delete();
@@ -54,7 +51,6 @@ namespace BookHiveCorp.App_Start
 
             CreateAdminUser().Wait();
         }
-
 
         private async Task CreateAdminUser()
         {
@@ -83,6 +79,5 @@ namespace BookHiveCorp.App_Start
                 }
             }
         }
-
     }
 }
